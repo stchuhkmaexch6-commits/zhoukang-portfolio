@@ -149,7 +149,7 @@ export const localWorks = {
     { title: "泳池", meta: "mg / VIDEO", type: 'video', src: assetUrl("特效", "mg", "泳池.mp4") },
   ],
   aplus: [
-    { title: "1788498925_bb43e786c295cc3a87fc356cbdcbc4a8", meta: "IMAGE", type: 'image', src: assetUrl("亚马逊a+", "1788498925_bb43e786c295cc3a87fc356cbdcbc4a8.png") },
+    { title: "咖啡", meta: "IMAGE", type: 'image', src: assetUrl("亚马逊a+", "咖啡.png") },
     { title: "背包", meta: "IMAGE", type: 'image', src: assetUrl("亚马逊a+", "背包.png") },
     { title: "毕业季套图(电脑端)", meta: "IMAGE", type: 'image', src: assetUrl("亚马逊a+", "毕业季套图(电脑端).png") },
     { title: "毕业季套图(手机端)", meta: "IMAGE", type: 'image', src: assetUrl("亚马逊a+", "毕业季套图(手机端) .png") },
