@@ -92,9 +92,22 @@ function About() {
     ['政治面貌', '中共党员'],
     ['微信号', 'wxid_9pdpshpojw0a21'],
   ]
+  const skillGroups = [
+    ['传统软件 / SOFTWARE', '剪映、Premiere Pro、DaVinci Resolve、After Effects、Cinema 4D、Photoshop、Illustrator'],
+    ['工作流与智能体 / WORKFLOW', 'ComfyUI、Codex'],
+    ['视频模型 / VIDEO MODELS', '可灵 3.0、即梦 SD、Grok、海螺 H3、Wan 3.0'],
+    ['闭源图片模型 / CLOSED IMAGE', '香蕉 2 / Pro、GPT-IMG 2.0 / 2.5、即梦 5.0'],
+    ['开源图片模型 / OPEN IMAGE', 'Qwen-Z-Img、Qwen-Edit2012、Qwen-Img'],
+    ['集合平台 / PLATFORMS', 'LibTV、Lovart、Coze'],
+    ['开发与制作 / DEVELOPMENT', 'AI 工作台开发、无限画布制作等'],
+  ]
   return <section id="about" className="about section-pad">
     <div className="content-grid"><div><SectionLabel number="01">个人信息 / Profile</SectionLabel><h2>周康<br /><i>ZHOU KANG.</i></h2></div><div className="about-intro"><p className="lede">AI 视觉设计师、影视创作者与电商运营。</p><p>数字媒体技术专业毕业，兼具影视视觉设计、AI 内容生产与电商运营经验。擅长将提示词、工作流与设计工具沉淀为可复用方法，并以作品能否落地、服务业务作为判断标准。</p><a className="text-link" href="mailto:2246921198@qq.com">2246921198@qq.com <ArrowUpRight size={15} /></a></div></div>
     <div className="profile-facts">{profileFacts.map(([label, value]) => <div key={label}><span>{label}</span><strong>{value}</strong></div>)}</div>
+    <div className="skills-block">
+      <div className="skills-heading"><SectionLabel number="S">专业技能 / Professional Skills</SectionLabel><p>从传统影像制作到 AI 工作流开发，覆盖创意生产的完整链路。</p></div>
+      <div className="skills-list">{skillGroups.map(([label, value], i) => <div className="skill-row" key={label}><span className="skill-index">0{i + 1}</span><h3>{label}</h3><p>{value}</p></div>)}</div>
+    </div>
     <div className="about-stats"><div><strong>3,184</strong><span>张图片<br />独立交付</span></div><div><strong>982</strong><span>项视频<br />制作交付</span></div><div><strong>0.57%</strong><span>专业成绩<br />保持第一</span></div><div className="stat-note">国家级 3 项 / 省级 8 项<br />国家奖学金 / 优秀毕业生</div></div>
   </section>
 }
@@ -103,11 +116,11 @@ function Timeline() {
   const jobs = [
     ['2026.05-2026.07.17', '骏弘科技技术有限公司 / 运营', '转正考核首月前 15 天完成“3 个月累计纯利润 10 万元”指标。负责独立站店铺装修与页面落地、AI 产品迁移复刻、数据分析及 Facebook 投流转化。'],
     ['2025.11-2026.05', '骏弘科技技术有限公司 / AI视觉设计师', '独立完成 3,184 张图片与 982 项视频制作，覆盖电商视觉、宣传素材及多场景内容。搭建个人提示词库、工作流 Skills 与 AI 设计画布，沉淀可复用生产流程。'],
-    ['实习经历 / 01', '爱纳影视传媒有限公司 / 影视后期编导', '结合 AI 技术与 Premiere、After Effects、DaVinci Resolve、剪映完成视频策划制作，涵盖 AI 卡通形象定制、企业宣传片、应急急救宣传片与 AI 短视频。'],
-    ['实习经历 / 02', '志会嘉科技有限公司 / AI电商美工', '使用 ComfyUI 等 AI 与设计工具，制作亚马逊旗舰店主页、批量 A+ 套图、产品及模特场景图，并完成电商产品投流广告。'],
+    ['2025.05-2026.08', '志会嘉科技有限公司 / AI电商美工', '使用 ComfyUI 等 AI 与设计工具，制作亚马逊旗舰店主页、批量 A+ 套图、产品及模特场景图，并完成电商产品投流广告。'],
+    ['工作经历', '爱纳影视传媒有限公司 / 影视后期编导', '结合 AI 技术与 Premiere、After Effects、DaVinci Resolve、剪映完成视频策划制作，涵盖 AI 卡通形象定制、企业宣传片、应急急救宣传片与 AI 短视频。'],
   ]
   const awards = ['第十四届“挑战杯”秦创原中国大学生创业计划竞赛国家金奖', '广东省数字媒体技术职业技能大赛融媒体策划与制作省级二等奖', '广东省蓝桥杯视觉设计二等奖', '广东省互联网+银奖', '国家奖学金、优秀毕业生']
-  return <section className="timeline section-pad"><div className="timeline-head"><SectionLabel number="02">工作与实习 / Experience</SectionLabel><p>AI 视觉、影视制作<br />与电商运营的完整实践。</p></div><div className="timeline-line" />
+  return <section className="timeline section-pad"><div className="timeline-head"><SectionLabel number="02">工作经验 / Work Experience</SectionLabel><p>AI 视觉、影视制作<br />与电商运营的完整实践。</p></div><div className="timeline-line" />
     <div className="jobs">{jobs.map(([year, role, copy], i) => <article className="job" key={role}><span className="job-dot" /><span className="job-year">{year}</span><h3>{role}</h3><p>{copy}</p><span className="job-no">0{i + 1}</span></article>)}</div>
     <div className="honors"><SectionLabel number="A">竞赛与荣誉 / Honors</SectionLabel><div className="honors-list">{awards.map((award, i) => <div key={award}><span>0{i + 1}</span><p>{award}</p></div>)}</div></div>
   </section>
